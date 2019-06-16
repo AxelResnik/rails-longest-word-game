@@ -1,0 +1,8 @@
+<h1 class="h1 text-monospace">Results</h1>
+
+<h3 class="h3"> <%= @result[:message] %> </h3>
+<h3 class="h3">Your socre is: <strong><%= @result[:score] %></strong></h3>
+
+<button type="button" class="btn btn-link btn-lg border border-info">
+  <%= link_to "PLay again", '/new' %>
+</button>

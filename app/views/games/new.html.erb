@@ -1,0 +1,15 @@
+<h1 class="h1 text-monospace">New Game</h1>
+
+<div class="container d-flex">
+  <% @letters.each do |letter| %>
+  <div class='btn btn-primary btn-lg m-1'><%= letter %></div>
+  <% end %>
+</div>
+
+<p class="font-weight-bolder">What is the longest word you can find?</p>
+<form action="/score" method="get" class="form-group">
+  <input type="hidden" value="<%= Time.now %>" name="start_time">
+  <input type="hidden" value="<%= @letters %>" name="grid">
+  <input type="text" name="word" class='form-control'>
+  <button type="submit" class='btn btn-danger'>Play</button>
+</form>
